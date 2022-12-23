@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Condições</h1>
+    <input type="number" name="velocidade" id="velocidade">
+    <input type="button" value="Verificar" id="botao">
+    <div id="resultado">Informe sua velocidade...</div>
+    <div id="multa" style="color: yellow;"></div>
+    <p id="msg-cinto" style="display: none;">Dirija sempre usando cinto de segurança!</p>
+
+    <script>
+        let botao = window.document.querySelector('input#botao')
+        botao.addEventListener('click', verificar)
+        
+        function verificar() {
+            let txtVelocidade = window.document.querySelector('input#velocidade')
+            let velocidade = Number(txtVelocidade.value)
+            let resultado = window.document.querySelector('div#resultado')
+            let multa = window.document.querySelector('div#multa')
+            let cinto = window.document.querySelector('p#msg-cinto')
+
+            resultado.innerHTML = `A velocidade do seu carro é ${velocidade}Km/h!`
+            if (velocidade > 60) {
+                multa.innerHTML = `Você ultrapassou a velocidade permitira! MULTADO!`
+            }
+            cinto.style.display = 'block'
+        }    
+    </script>
+</body>
+</html>
