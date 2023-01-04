@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex012</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Hora Atual</h1>
+    <div id="hora"></div>
+    <div id="resultado"></div>
+
+    <script>
+        let agora = new Date()
+        let hora = agora.getHours()
+        let minuto = agora.getMinutes()
+        let horario = window.document.getElementById('hora')
+        let resultado = window.document.getElementById('resultado')
+
+        horario.innerHTML = `Agora são ${hora}:${minuto}h!`
+        if (hora < 12) {
+            resultado.innerHTML = 'Bom dia!'
+        } else if (hora <= 18) {
+            resultado.innerHTML = 'Boa tarde!'
+        } else {
+            resultado.innerHTML = 'Boa noite!'
+        }
+    </script>
+</body>
+</html>

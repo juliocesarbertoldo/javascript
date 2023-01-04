@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex013</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <h1>Dia da semana</h1>
+    <div id="dia"></div>
+
+    <script>
+        let agora = new Date()
+        let diaSem = agora.getDay()
+        let dia = window.document.getElementById('dia')
+        let hoje = ''
+
+        switch (diaSem) {
+            case 0:
+                hoje = `Domingo`
+                break;
+            case 1:
+                hoje = `Segunda-Feira`
+                break;
+            case 2:
+                hoje = `Terça-Feira`
+                break;
+            case 3:
+                hoje = `Quarta-Feira`
+                break;
+            case 4:
+                hoje = `Quinta-Feira`
+                break;
+            case 5:
+                hoje = `Sexta-Feira`
+                break;
+            default:
+                hoje = 'Sábado'
+                break;
+        }
+
+        dia.innerHTML = `Hoje é ${hoje}!`
+    </script>
+</body>
+
+</html>
