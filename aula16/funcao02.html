@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Somar dois numeros</h1>
+    <label for="n1"><input type="number" name="n1" id="n1"></label> +
+    <label for="n2"><input type="number" name="n2" id="n2"></label> 
+    <input type="button" value="Somar" id="botao">
+    <div id="resultado">Digite os numeros para soma</div>
+
+    <script>
+        let resultado = window.document.getElementById('resultado')
+        let botao = window.document.getElementById('botao')
+        botao.addEventListener('click', somar)
+
+        function somar() {
+            let txtn1 = window.document.getElementById('n1')
+            let txtn2 = window.document.getElementById('n2')
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+
+            resultado.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${n1 + n2}`
+        }
+    </script>
+    
+</body>
+</html>

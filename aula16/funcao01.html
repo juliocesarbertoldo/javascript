@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcao 01</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <h1>Verificar Impar ou Par</h1>
+    <label for="numero"><input type="number" name="numero" id="numero"></label>
+    <label for="botao"><input type="button" value="Verificar" id="botao"></label>
+    <div id="resultado">Digite um numero</div>
+
+    <script>
+        let botao = window.document.getElementById('botao')
+        botao.addEventListener('click', imparPar)
+
+        function imparPar() {
+            let num = window.document.getElementById('numero')
+            let resultado = window.document.getElementById('resultado')
+            let n = Number(num.value)
+
+            if (n % 2 == 0) {
+                resultado.innerHTML = `O numero ${n} é PAR!`
+            } else {
+                resultado.innerHTML = `O numero ${n} é ÍMPAR!`
+            }
+        }
+    </script>
+</body>
+
+</html>

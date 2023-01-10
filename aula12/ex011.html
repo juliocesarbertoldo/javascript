@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +8,32 @@
     <title>Ex011</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-        <h1>Votos Brasil</h1>
-        <input type="number" name="idade" id="idade">
-        <input id="botao" type="button" value="Verificar">
-        <div id="resultado">Informe a sua idade...</div>
-        
-        <script>
-            let botao = document.getElementById('botao')
-            botao.addEventListener('click', verificar)
-            
-            function verificar() {
-                let txtidade = window.document.getElementById('idade')
-                let idade = Number(txtidade.value)
-                let resultado = window.document.getElementById('resultado')
 
-                if (idade < 16) {
-                    resultado.innerHTML = `Com ${idade} anos, NÃO VOTA!`
-                } else if (idade < 18 || idade > 60) {
-                    resultado.innerHTML = `Com ${idade} anos, VOTO OPCIONAL!`
-                } else {
-                    resultado.innerHTML =(`Com ${idade} anos, VOTO OBRIGATÓRIO!`)
-                }
-                
+<body>
+    <h1>Votos Brasil</h1>
+    <input type="number" name="idade" id="idade">
+    <input id="botao" type="button" value="Verificar">
+    <div id="resultado">Informe a sua idade...</div>
+
+    <script>
+        let botao = document.getElementById('botao')
+        botao.addEventListener('click', verificar)
+
+        function verificar() {
+            let txtidade = window.document.getElementById('idade')
+            let idade = Number(txtidade.value)
+            let resultado = window.document.getElementById('resultado')
+
+            if (idade < 16) {
+                resultado.innerHTML = `Com ${idade} anos, NÃO VOTA!`
+            } else if (idade < 18 || idade > 60) {
+                resultado.innerHTML = `Com ${idade} anos, VOTO OPCIONAL!`
+            } else {
+                resultado.innerHTML = `Com ${idade} anos, VOTO OBRIGATÓRIO!`
             }
-        </script>
+
+        }
+    </script>
 </body>
+
 </html>

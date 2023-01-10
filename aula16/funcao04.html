@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>Calculo Fatorial</h1>
+    <label for="num"><input type="number" name="num" id="num"></label>
+    <label for="botao"><input type="button" value="Calcular" id="botao"></label>
+    <div id="resultado">Digite um numero</div>
+
+    <script>
+        let resultado = window.document.getElementById('resultado')
+        let botao = window.document.querySelector('input#botao')
+        botao.addEventListener('click', calcular)
+
+        function calcular() {
+            let txtnum = window.document.getElementById('num')
+            let num = Number(txtnum.value)
+            let fat = num
+
+            for (let i = num; i > 1; i--) {
+                fat *= i - 1
+            }
+
+            resultado.innerHTML = `O fatorial de ${num} é ${fat}`
+        }
+    </script>
+</body>
+</html>
