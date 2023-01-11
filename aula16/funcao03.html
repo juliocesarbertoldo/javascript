@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Funcao 03</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <h1>Dobro de um número</h1>
     <label for="num"><input type="number" name="num" id="num"></label>
@@ -17,13 +19,20 @@
         let resultado = window.document.getElementById('resultado')
         let botao = window.document.getElementById('botao')
         botao.addEventListener('click', dobrar)
-        
+        /*
+        ===== SEM PARÂMETRO =====
         function dobrar() {
             let txtnum = window.document.getElementById('num')
             let num = Number(txtnum.value)
 
             resultado.innerHTML = `O dobro de ${num} é ${num * 2}`
         }
+        */
+        function dobrar(num) {
+            num = Number(window.document.getElementById('num').value)
+            resultado.innerHTML = `O dobro de ${num} é ${num * 2}`
+        }
     </script>
 </body>
+
 </html>

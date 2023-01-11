@@ -16,18 +16,28 @@
     <div id="resultado">Digite um numero</div>
 
     <script>
+        let resultado = window.document.getElementById('resultado')
         let botao = window.document.getElementById('botao')
         botao.addEventListener('click', imparPar)
-
+        /*
+        ======SEM PARÂMETRO=====
         function imparPar() {
             let num = window.document.getElementById('numero')
-            let resultado = window.document.getElementById('resultado')
             let n = Number(num.value)
 
             if (n % 2 == 0) {
                 resultado.innerHTML = `O numero ${n} é PAR!`
             } else {
                 resultado.innerHTML = `O numero ${n} é ÍMPAR!`
+            }
+        }
+        */
+        function imparPar(num) {
+            num = Number(window.document.getElementById('numero').value)
+            if (num % 2 == 0) {
+                resultado.innerHTML = `O numero ${num} é PAR!`
+            } else {
+                resultado.innerHTML = `O numero ${num} é ÍMPAR!`
             }
         }
     </script>
